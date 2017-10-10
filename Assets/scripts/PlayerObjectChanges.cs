@@ -1,33 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Director;
 
 public class PlayerObjectChanges : MonoBehaviour {
 
-    public Mesh PlayerRondje;
-    public Mesh PlayerSquare;
-    public Mesh PlayerTree;
+    public Mesh _playerBall;
+    public Mesh _playerSquare;
+    public Mesh _playerTriangle;
     private MeshFilter meshrenderer;
+
+    private PlayerStateEnum playerstateenum;
+
     // Use this for initialization
     void Start ()
     {
+        GameObject thePlayer = GameObject.Find("GameManager");
         meshrenderer = GetComponent<MeshFilter>();
-        
-	}
+        playerstateenum = GetComponent<PlayerStateEnum>();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.S))
+        var playerState = playerstateenum.playerState;
+
+        if (playerState == PlayerStateEnum.PlayerStates.PlayerBall)
         {
-            meshrenderer.mesh = PlayerRondje;
+            meshrenderer.mesh = _playerBall;
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (playerState == PlayerStateEnum.PlayerStates.PlayerSquare)
         {
-            meshrenderer.mesh = PlayerSquare;
+            meshrenderer.mesh = _playerSquare;
         }
-        if(Input.GetKeyDown(KeyCode.D))
+        if(playerState == PlayerStateEnum.PlayerStates.PlayerTriangle)
         {
-            meshrenderer.mesh = PlayerTree;
+            meshrenderer.mesh = _playerTriangle;
         }
 
     }

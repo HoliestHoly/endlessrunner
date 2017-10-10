@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scenes/Test_scene3.unity
+- path: C:/Users/Joppe/Desktop/MEDIA COLLEGE/bewijzenmap/Jaar 2/p2.1/GPR/endlessrunner/Assets/scenes/Test_scene1.unity
   isLoaded: 1
   isActive: 1
