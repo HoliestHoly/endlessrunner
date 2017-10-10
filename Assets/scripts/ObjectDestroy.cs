@@ -9,7 +9,7 @@ public class ObjectDestroy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (transform.position.x < -25) {
+		if (transform.position.x < -28) {
 			Destroy (this.gameObject);
 			GlobalVariables.obstaclesLive --;
 			if (GlobalVariables.obstaclesLive < 5)
