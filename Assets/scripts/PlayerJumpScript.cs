@@ -24,7 +24,7 @@ public class PlayerJumpScript : MonoBehaviour {
 
     bool CanJump()
     {
-        return Physics2D.Raycast(transform.position, Vector2.down, 0.6f, mask);
+        return Physics2D.Raycast(transform.position, Vector2.down, 2f, mask);
     }
 
 }

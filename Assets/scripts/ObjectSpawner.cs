@@ -12,13 +12,18 @@ public class ObjectSpawner : MonoBehaviour
 	void Start () 
 	{
 		_lastSpawnTime = 1;
+
+		for (int i = 0; i < 4; i++) {
+			Spawn ();
+			GlobalVariables.obstaclesLive ++;
+		}
 	}
 
 	void Spawn ()
 	{
 		var randomObject = obstacles [Random.Range (0, obstacles.Length)]; // Pak een random object uit de array obstacles.
 
-		Vector3 wantedPosition = new Vector3 (20, 0, 0); //  initaliseren een positie.
+		Vector3 wantedPosition = new Vector3 (40, -5, 0); //  initaliseren een positie.
 
 		if (_lastChunk != null) // als er wel een chunk is.
 		{
@@ -35,10 +40,6 @@ public class ObjectSpawner : MonoBehaviour
 	void LateUpdate () 
 	{
 		_lastSpawnTime -= Time.deltaTime;
-		if (GlobalVariables.obstaclesLive < 7) {
-			Spawn ();
-			GlobalVariables.obstaclesLive++;
-		}
 
 
 			/*if (_lastSpawnTime <= 0)
@@ -50,6 +51,8 @@ public class ObjectSpawner : MonoBehaviour
 			*/
 			if(GlobalVariables.spawnNow){
 				Spawn();
+				GlobalVariables.obstaclesLive ++;
+				GlobalVariables.spawnNow = false;
 			}
 	
 	}
