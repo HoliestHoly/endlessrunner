@@ -25,7 +25,7 @@ public class PlayerJumpScript : MonoBehaviour {
 
 
 
-        Debug.Log(doubleJump);
+        
         if (doubleJump == 1 && playerState == PlayerStateEnum.PlayerStates.PlayerTriangle)
         {
             if (Input.GetKeyDown(KeyCode.Space))

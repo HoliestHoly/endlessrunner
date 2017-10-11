@@ -27,15 +27,30 @@ public class PlayerObjectChanges : MonoBehaviour {
 
         if (playerState == PlayerStateEnum.PlayerStates.PlayerBall)
         {
-            meshrenderer.mesh = _playerBall;
+            transform.localScale = new Vector3(1.149944f, 1.149944f, 1);
+            meshrenderer.mesh = _playerBall;           
         }
         if (playerState == PlayerStateEnum.PlayerStates.PlayerSquare)
         {
             meshrenderer.mesh = _playerSquare;
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                transform.localScale = new Vector3(0.7001128f, 0.5f, 1);
+            }
+            else
+            {
+                transform.localScale = new Vector3(0.7001128f, 1.149944f, 1);
+            }
+            //if (Input.GetKeyUp(KeyCode.LeftShift))
+            //{
+            //    transform.localScale = new Vector3(0.7001128f, 1.149944f, 1);
+            //}
         }
         if(playerState == PlayerStateEnum.PlayerStates.PlayerTriangle)
         {
             meshrenderer.mesh = _playerTriangle;
+            transform.localScale = new Vector3(0.7001128f, 0.75f, 1);
         }
 
     }
