@@ -34,6 +34,7 @@ public class ObjectSpawner : MonoBehaviour
 		_lastSpawnTime = 1;
 		var newchunk = Instantiate (randomObject, wantedPosition, Quaternion.identity);
 		_lastChunk = newchunk.GetComponent<Chunk> ();
+
 	}
 
 
@@ -53,6 +54,7 @@ public class ObjectSpawner : MonoBehaviour
 				Spawn();
 				GlobalVariables.obstaclesLive ++;
 				GlobalVariables.spawnNow = false;
+				GlobalVariables.speed += 0.2f;
 			}
 	
 	}

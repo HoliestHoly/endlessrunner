@@ -1,11 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ObjectDestroy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\GlobalVariables.cs">
     <Files>
       <File FileName="Assets\scripts\ObjectSpawner.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\movementtest.cs" Line="1" Column="1" />
       <File FileName="..\..\..\p1.3\opdracht2\New Unity Project\Assets\scripts\Projectile.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ObjectDestroy.cs" Line="12" Column="33" />
+      <File FileName="Assets\scripts\ObjectDestroy.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\PlayerObjectChanges.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\GlobalVariables.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\PlayerJumpScript.cs" Line="1" Column="1" />
