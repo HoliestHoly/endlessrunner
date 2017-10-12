@@ -54,6 +54,7 @@
      <Compile Include="Assets\scripts\PlayerJumpScript.cs" />
      <Compile Include="Assets\scripts\PlayerObjectChanges.cs" />
      <Compile Include="Assets\scripts\PlayerStateEnum.cs" />
+     <Compile Include="Assets\scripts\ScoreScript.cs" />
      <Compile Include="Assets\scripts\movementtest.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

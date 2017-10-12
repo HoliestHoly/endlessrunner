@@ -9,14 +9,15 @@ public class PlayerObjectChanges : MonoBehaviour {
     public Mesh _playerSquare;
     public Mesh _playerTriangle;
     private MeshFilter meshrenderer;
+    private BoxCollider2D boxCollider;
 
     private PlayerStateEnum playerstateenum;
 
     // Use this for initialization
     void Start ()
     {
-        GameObject thePlayer = GameObject.Find("GameManager");
         meshrenderer = GetComponent<MeshFilter>();
+        boxCollider = GetComponent<BoxCollider2D>();
         playerstateenum = GetComponent<PlayerStateEnum>();
 
     }
@@ -27,30 +28,31 @@ public class PlayerObjectChanges : MonoBehaviour {
 
         if (playerState == PlayerStateEnum.PlayerStates.PlayerBall)
         {
-            transform.localScale = new Vector3(1.149944f, 1.149944f, 1);
+            boxCollider.size = new Vector2(1.149944f, 1.149944f);
+            boxCollider.offset = new Vector2(0.03f, 0.07f);
+            transform.localScale = new Vector2(1.149944f, 1.149944f);
             meshrenderer.mesh = _playerBall;           
         }
         if (playerState == PlayerStateEnum.PlayerStates.PlayerSquare)
         {
             meshrenderer.mesh = _playerSquare;
-
+            boxCollider.size = new Vector2(0.7001128f, 1f);
+            boxCollider.offset = new Vector2(0.12f, 0.04f);
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                transform.localScale = new Vector3(0.7001128f, 0.5f, 1);
+                transform.localScale = new Vector2(0.7001128f, 0.5f);
             }
             else
             {
-                transform.localScale = new Vector3(0.7001128f, 1.149944f, 1);
+                transform.localScale = new Vector2(0.7001128f, 1.149944f);
             }
-            //if (Input.GetKeyUp(KeyCode.LeftShift))
-            //{
-            //    transform.localScale = new Vector3(0.7001128f, 1.149944f, 1);
-            //}
         }
         if(playerState == PlayerStateEnum.PlayerStates.PlayerTriangle)
         {
             meshrenderer.mesh = _playerTriangle;
-            transform.localScale = new Vector3(0.7001128f, 0.75f, 1);
+            transform.localScale = new Vector2(0.3f, 0.3f);
+            boxCollider.size = new Vector2(1f, 3.7f);
+            boxCollider.offset = new Vector2(1f, 2f);
         }
 
     }
