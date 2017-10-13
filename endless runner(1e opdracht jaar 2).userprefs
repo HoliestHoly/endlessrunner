@@ -1,14 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\GlobalVariables.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\PlayerLose.cs">
     <Files>
-      <File FileName="Assets\scripts\ObjectSpawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ObjectSpawner.cs" Line="34" Column="22" />
       <File FileName="Assets\scripts\movementtest.cs" Line="1" Column="1" />
       <File FileName="..\..\..\p1.3\opdracht2\New Unity Project\Assets\scripts\Projectile.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ObjectDestroy.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ObjectDestroy.cs" Line="12" Column="33" />
       <File FileName="Assets\scripts\PlayerObjectChanges.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\GlobalVariables.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\PlayerJumpScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\PlayerLose.cs" Line="19" Column="43" />
+      <File FileName="Assets\scripts\BreakWall.cs" Line="35" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

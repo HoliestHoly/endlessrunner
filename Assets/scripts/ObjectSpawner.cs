@@ -40,7 +40,7 @@ public class ObjectSpawner : MonoBehaviour
 
 	void LateUpdate () 
 	{
-		_lastSpawnTime -= Time.deltaTime;
+		_lastSpawnTime -= Time.deltaTime; //timer
 
 
 			/*if (_lastSpawnTime <= 0)
@@ -50,11 +50,11 @@ public class ObjectSpawner : MonoBehaviour
 			
 			}
 			*/
-			if(GlobalVariables.spawnNow){
+			if(GlobalVariables.spawnNow){  //Spawned een chunk en maakt het spel sneller
 				Spawn();
 				GlobalVariables.obstaclesLive ++;
 				GlobalVariables.spawnNow = false;
-				GlobalVariables.speed += 0.2f;
+				GlobalVariables.speed += 0.3f;
 			}
 	
 	}
