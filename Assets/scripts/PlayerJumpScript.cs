@@ -23,6 +23,7 @@ public class PlayerJumpScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        //Checkt de Current playerstate
         var playerState = playerstateenum.playerState;
 
 		if (Input.GetKey(KeyCode.C)) {
@@ -33,7 +34,7 @@ public class PlayerJumpScript : MonoBehaviour {
 			rigidbody.gravityScale = normalGravity;
 		}
 
-        
+        //Checkt of je een dubbel jump kan doen 
         if (doubleJump == 1 && playerState == PlayerStateEnum.PlayerStates.PlayerTriangle)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -43,6 +44,7 @@ public class PlayerJumpScript : MonoBehaviour {
             }
         }
 
+        //Kijkt of je kan springen
         if (Input.GetKeyDown(KeyCode.Space) && CanJump())
         {
             rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpPower);
@@ -53,6 +55,7 @@ public class PlayerJumpScript : MonoBehaviour {
 
     }
 
+    //Checkt of je op de grond staat
     bool CanJump()
     {
         return Physics2D.Raycast(transform.position, Vector2.down, 0.6f, mask);
