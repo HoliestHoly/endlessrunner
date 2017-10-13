@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8EAA65F0-FA9C-64F4-4D2E-99EFC77C409D}</ProjectGuid>
+    <ProjectGuid>{EFAAEE68-5CB3-F775-F0E5-C5D00439E1AC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -39,43 +39,45 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\scripts\BreakWall.cs" />
-     <Compile Include="Assets\scripts\Chunk.cs" />
-     <Compile Include="Assets\scripts\GameOverScore.cs" />
-     <Compile Include="Assets\scripts\GlobalVariables.cs" />
-     <Compile Include="Assets\scripts\MenuActions.cs" />
-     <Compile Include="Assets\scripts\MovementScript.cs" />
-     <Compile Include="Assets\scripts\ObjectDestroy.cs" />
-     <Compile Include="Assets\scripts\ObjectSpawner.cs" />
-     <Compile Include="Assets\scripts\PlayerJumpScript.cs" />
-     <Compile Include="Assets\scripts\PlayerLose.cs" />
-     <Compile Include="Assets\scripts\PlayerObjectChanges.cs" />
-     <Compile Include="Assets\scripts\PlayerStateEnum.cs" />
-     <Compile Include="Assets\scripts\ScoreScript.cs" />
+     <Compile Include="Assets\scripts\Game manager scripts\BreakWall.cs" />
+     <Compile Include="Assets\scripts\Game manager scripts\Chunk.cs" />
+     <Compile Include="Assets\scripts\Game manager scripts\MovementScript.cs" />
+     <Compile Include="Assets\scripts\Game manager scripts\ObjectDestroy.cs" />
+     <Compile Include="Assets\scripts\Game manager scripts\ObjectSpawner.cs" />
+     <Compile Include="Assets\scripts\UI and Utility\GameOverScore.cs" />
+     <Compile Include="Assets\scripts\UI and Utility\GlobalVariables.cs" />
+     <Compile Include="Assets\scripts\UI and Utility\LoadOnClick.cs" />
+     <Compile Include="Assets\scripts\UI and Utility\MenuActions.cs" />
+     <Compile Include="Assets\scripts\UI and Utility\Quit.cs" />
+     <Compile Include="Assets\scripts\UI and Utility\ScoreScript.cs" />
+     <Compile Include="Assets\scripts\player scripts\PlayerJumpScript.cs" />
+     <Compile Include="Assets\scripts\player scripts\PlayerLose.cs" />
+     <Compile Include="Assets\scripts\player scripts\PlayerObjectChanges.cs" />
+     <Compile Include="Assets\scripts\player scripts\PlayerStateEnum.cs" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.PlaymodeTestsRunner">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

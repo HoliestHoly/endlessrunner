@@ -16,13 +16,16 @@ public class PlayerLose : MonoBehaviour {
 				timeLeft -= Time.deltaTime;
 				if ( timeLeft < 0 )
 				{
-					SceneManager.LoadScene("Lose_Scene");
+					SceneManager.LoadScene("Lose_screen");
 				}
 
 		}
 		if (GlobalVariables.playerLost) 
 		{
-			SceneManager.LoadScene("Lose_Scene");
+			SceneManager.LoadScene("Lose_screen");
+			GlobalVariables.playerLost = false;
+			GlobalVariables.speed = 4f;
+
 		}
 	}
 }

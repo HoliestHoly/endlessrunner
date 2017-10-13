@@ -42,19 +42,11 @@ public class ObjectSpawner : MonoBehaviour
 	{
 		lastSpawnTime -= Time.deltaTime; //timer
 
-
-			/*if (_lastSpawnTime <= 0)
-			{
-				Spawn();
-			GlobalVariables.obstaclesLive ++;
-			
-			}
-			*/
 			if(GlobalVariables.spawnNow){  //Spawned een chunk en maakt het spel sneller
 				Spawn();
 				GlobalVariables.obstaclesLive ++;
 				GlobalVariables.spawnNow = false;
-				GlobalVariables.speed += 1f;
+				GlobalVariables.speed += 0.4f;
 			}
 	
 	}
