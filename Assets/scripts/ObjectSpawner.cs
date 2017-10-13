@@ -5,17 +5,17 @@ using UnityEngine;
 public class ObjectSpawner : MonoBehaviour 
 {
 	public GameObject[] obstacles;
-	private float _lastSpawnTime;
-	private Chunk _lastChunk;
+	private float lastSpawnTime;
+	private Chunk lastChunk;
 
 	// Use this for initialization
 	void Start () 
 	{
-		_lastSpawnTime = 1;
+		lastSpawnTime = 1;
 
 		for (int i = 0; i < 4; i++) {
 			Spawn ();
-			GlobalVariables.obstaclesLive ++;
+			GlobalVariables.obstaclesLive ++; //Spawned de eerste 4 chunks
 		}
 	}
 
@@ -25,22 +25,22 @@ public class ObjectSpawner : MonoBehaviour
 
 		Vector3 wantedPosition = new Vector3 (40, -5, 0); //  initaliseren een positie.
 
-		if (_lastChunk != null) // als er wel een chunk is.
+		if (lastChunk != null) // als er wel een chunk is.
 		{
-			Vector3 offset = new Vector3 (_lastChunk.Size.width, 0);//_lastChunk.Size.height); // gewoon
-			wantedPosition = _lastChunk.transform.position + offset; 
+			Vector3 offset = new Vector3 (lastChunk.Size.width, 0);//lastChunk.Size.height); // zorgt dat de chunks netjes achter elkaar komen
+			wantedPosition = lastChunk.transform.position + offset; 
 		}
 
-		_lastSpawnTime = 1;
-		var newchunk = Instantiate (randomObject, wantedPosition, Quaternion.identity);
-		_lastChunk = newchunk.GetComponent<Chunk> ();
+		lastSpawnTime = 1;
+		var newchunk = Instantiate (randomObject, wantedPosition, Quaternion.identity); //Spawned het
+		lastChunk = newchunk.GetComponent<Chunk> (); //veranderd de oude chunk in de nieuwe chunk
 
 	}
 
 
 	void LateUpdate () 
 	{
-		_lastSpawnTime -= Time.deltaTime; //timer
+		lastSpawnTime -= Time.deltaTime; //timer
 
 
 			/*if (_lastSpawnTime <= 0)
@@ -54,7 +54,7 @@ public class ObjectSpawner : MonoBehaviour
 				Spawn();
 				GlobalVariables.obstaclesLive ++;
 				GlobalVariables.spawnNow = false;
-				GlobalVariables.speed += 0.3f;
+				GlobalVariables.speed += 1f;
 			}
 	
 	}

@@ -22,7 +22,7 @@ public class PlayerObjectChanges : MonoBehaviour {
 
     }
 	
-	// Update is called once per frame
+
 	void Update () {
         var playerState = playerstateenum.playerState;
 

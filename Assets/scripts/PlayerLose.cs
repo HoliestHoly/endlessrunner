@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLose : MonoBehaviour {
 
-	// Use this for initialization
-	private float timeLeft = 3f;
+
+	private float timeLeft = 2f;
 	
-	// Update is called once per frame
-	void Update () 
+
+	void Update () //als de speler uit de map valt dan gaat het spel naar een lose screen na een timer van 2 seconde
 	{
 		if (transform.position.y < -10)
 		{

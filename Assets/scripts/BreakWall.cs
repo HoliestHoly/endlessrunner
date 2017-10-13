@@ -20,12 +20,12 @@ public class BreakWall : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D other)
     {
         var playerState = playerstateenum.playerState;
-		if (other.gameObject.tag == "BreakableWall" && playerState == PlayerStateEnum.PlayerStates.PlayerBall)
+		if (other.gameObject.tag == "BreakableWall" && playerState == PlayerStateEnum.PlayerStates.PlayerBall) //als speler een ball is dan gaat muur dood
 		{
 
 			Destroy (other.gameObject);
 		} 
-		else if (other.gameObject.tag == "BreakableWall" && playerState == PlayerStateEnum.PlayerStates.PlayerSquare) 
+		else if (other.gameObject.tag == "BreakableWall" && playerState == PlayerStateEnum.PlayerStates.PlayerSquare) //als speler een ander object is gaat speler dood
 		{
 			GlobalVariables.playerLost = true;
 		}

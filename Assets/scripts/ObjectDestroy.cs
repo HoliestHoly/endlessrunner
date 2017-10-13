@@ -7,8 +7,8 @@ public class ObjectDestroy : MonoBehaviour {
 
 
 	
-	// Update is called once per frame
-	void Update () {
+
+	void Update () { //destroys obstacles en zorgt dat er nooit minder/meer dan 5 objecten in het level zijn
 		if (transform.position.x < -32) {
 			Destroy (this.gameObject);
 			GlobalVariables.obstaclesLive --;

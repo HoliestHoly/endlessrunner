@@ -8,6 +8,8 @@ public class PlayerJumpScript : MonoBehaviour {
     private int doubleJump = 0;
     public LayerMask mask;
     new private Rigidbody2D rigidbody;
+	private int increasedGravity = 10;
+	private int normalGravity = 3;
 
     private PlayerStateEnum playerstateenum;
 
@@ -23,7 +25,13 @@ public class PlayerJumpScript : MonoBehaviour {
     {
         var playerState = playerstateenum.playerState;
 
-
+		if (Input.GetKey(KeyCode.C)) {
+			rigidbody.gravityScale = increasedGravity;
+		} 
+		else 
+		{
+			rigidbody.gravityScale = normalGravity;
+		}
 
         
         if (doubleJump == 1 && playerState == PlayerStateEnum.PlayerStates.PlayerTriangle)
@@ -41,6 +49,7 @@ public class PlayerJumpScript : MonoBehaviour {
             doubleJump = 1;
 
         }
+
 
     }
 

@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class movementtest : MonoBehaviour {
+public class MovementScript : MonoBehaviour {
 
 
 
-	// Update is called once per frame
-	void Update () {
+
+	void Update () { //laat dingen bewegen
 
 		var pos = transform.position;
 		pos.x -= GlobalVariables.speed * Time.deltaTime;
-		transform.position = pos;
+		transform.position = pos; 
 	}
 }
